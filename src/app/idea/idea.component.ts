@@ -12,11 +12,11 @@ export class IdeaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.ideaList = this.ideaBoxService.getIdeas()
+    this.ideaList = this.ideaBoxService.getIdeas();
 
   }
   getIdeas() {
-    console.log(this.ideaBoxService.getIdeas());
+    (this.ideaBoxService.getIdeas());
     this.ideaBoxService.getIdeas();
   }
 

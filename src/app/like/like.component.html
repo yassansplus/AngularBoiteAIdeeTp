@@ -1,2 +1,9 @@
-<a href="#"><i class="fas fa-heart fa-2x"></i>0 </a>
-<a href="#"><i class="fas fa-heart-broken fa-2x"></i> 0</a>
+<a href="#" (click)="addLike()" [ngClass]="{'green-text': idea.like>0}">
+  <i class="fas fa-heart fa-2x"></i>
+  {{idea.like}}
+</a>
+
+<a href="#" (click)="addDislike()" [ngClass]="{'red-text': idea.dislike>0}">
+  <i class="fas fa-heart-broken fa-2x"></i>
+  {{idea.dislike}}
+</a>
