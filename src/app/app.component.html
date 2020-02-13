@@ -1,11 +1,23 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a routerLink="ideas">Idees</a></li>
+      <li><a routerLink="login"  *ngIf="!authStatus" (click)="onSignIn()" >Connexion</a></li>
+<!--      <li><a routerLink="login"  *ngIf="authStatus" (click)="onSignOut()" >Deconnexion</a></li>-->
+<!--      <li><a href="collapsible.html">pseudo</a></li>-->
+    </ul>
+  </div>
+</nav>
+
 <div class="night">
   <div class="shooting_star" *ngFor="let item of array"></div>
 </div>
 <div class="row">
   <div class="col s12">
     <h1 class="title"> {{title}} <span id="inLittle">By Yassine</span></h1>
-    <app-idea-form></app-idea-form>
-    <app-idea></app-idea>
-
+<!--    <app-idea-form></app-idea-form>-->
+<!--    <app-idea></app-idea>-->
+    <router-outlet></router-outlet>
   </div>
 </div>

@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), FormsModule,ReactiveFormsModule],
+  imports: [RouterModule.forRoot(routes), FormsModule, ReactiveFormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

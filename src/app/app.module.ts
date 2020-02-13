@@ -8,21 +8,31 @@ import { LikeComponent } from './like/like.component';
 import { IdeaFormComponent } from './idea-form/idea-form.component';
 import {FormsModule} from '@angular/forms';
 import {IdeaBoxService} from './services/idea-box.service';
+import {RouterModule, Routes} from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import {AuthGuardGuard} from './guard/auth-guard.guard';
 
+const appRoutes: Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'ideas', canActivate: [AuthGuardGuard], component: IdeaComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
     IdeaComponent,
     LikeComponent,
     IdeaFormComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    IdeaBoxService
+    IdeaBoxService,
+    AuthGuardGuard
   ],
   bootstrap: [AppComponent]
 })
