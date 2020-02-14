@@ -8,14 +8,11 @@ import { LikeComponent } from './like/like.component';
 import { IdeaFormComponent } from './idea-form/idea-form.component';
 import {FormsModule} from '@angular/forms';
 import {IdeaBoxService} from './services/idea-box.service';
-import {RouterModule, Routes} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import {AuthGuardGuard} from './guard/auth-guard.guard';
+import { Ng2IziToastModule } from 'ng2-izitoast';
 
-const appRoutes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'ideas', canActivate: [AuthGuardGuard], component: IdeaComponent },
-];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +25,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    Ng2IziToastModule
   ],
   providers: [
     IdeaBoxService,

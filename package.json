@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.11",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "materialize-css": "^1.0.0-rc.2",
+    "ng2-izitoast": "^2.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

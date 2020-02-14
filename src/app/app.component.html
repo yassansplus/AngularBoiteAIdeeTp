@@ -3,7 +3,7 @@
     <a href="#" class="brand-logo">Logo</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a routerLink="ideas">Idees</a></li>
-      <li><a routerLink="login"  *ngIf="!authStatus" (click)="onSignIn()" >Connexion</a></li>
+      <li><a   *ngIf="!getAuthStatus()"  >Connexion</a></li>
 <!--      <li><a routerLink="login"  *ngIf="authStatus" (click)="onSignOut()" >Deconnexion</a></li>-->
 <!--      <li><a href="collapsible.html">pseudo</a></li>-->
     </ul>
