@@ -18,7 +18,9 @@ import {AuthService} from '../services/auth.service';
 })
 export class AuthGuardGuard implements CanActivate, CanActivateChild, CanLoad {
   constructor(private authService: AuthService,
-              private router: Router) { }
+
+
+              ) { }
 
   canActivate(
     next: ActivatedRouteSnapshot,
