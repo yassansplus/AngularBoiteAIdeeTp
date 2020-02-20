@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   onSubmit(form) {
     if (form.value.pseudo === "Yassansplus" && form.value.password === "123456789") {
       console.log('Vous voila connecté')
-      this.authService.signIn();
+      this.authService.signIn(form.value.pseudo);
 
       this.router.navigate(['ideas']);
     }
