@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   onSubmit(form) {
-    if (form.value.pseudo === "Yassansplus" && form.value.password === "123456789") {
+    if (form.value.pseudo === "Radouane" && form.value.password === "123456789") {
       console.log('Vous voila connecté')
       this.authService.signIn(form.value.pseudo);
 
