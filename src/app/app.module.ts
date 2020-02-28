@@ -11,6 +11,7 @@ import {IdeaBoxService} from './services/idea-box.service';
 import { LoginComponent } from './login/login.component';
 import {AuthGuardGuard} from './guard/auth-guard.guard';
 import { Ng2IziToastModule } from 'ng2-izitoast';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { Ng2IziToastModule } from 'ng2-izitoast';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    Ng2IziToastModule
+    Ng2IziToastModule,
+    HttpClientModule,
   ],
   providers: [
     IdeaBoxService,

@@ -12,7 +12,7 @@ export class AuthService {
   isAuth = false;
   public user: User;
 
-  signIn(username) {
+  signIn(username = 'Yassansplus') {
     return new Promise(
       (resolve, reject) => {
         console.log();
